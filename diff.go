@@ -97,7 +97,7 @@ type Change struct {
 	Path   []string    `json:"path"`
 	From   interface{} `json:"from"`
 	To     interface{} `json:"to"`
-	parent interface{} `json:"parent"`
+	Parent interface{} `json:"parent"`
 }
 
 // ValueDiffer is an interface for custom differs
