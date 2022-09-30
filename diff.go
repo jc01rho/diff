@@ -271,7 +271,7 @@ func (cl *Changelog) Add(t string, path []string, ftco ...interface{}) {
 		To:   ftco[1],
 	}
 	if len(ftco) > 2 {
-		change.parent = ftco[2]
+		change.Parent = ftco[2]
 	}
 	(*cl) = append((*cl), change)
 }
