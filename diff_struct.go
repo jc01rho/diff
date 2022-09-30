@@ -73,9 +73,9 @@ func (d *Differ) structValues(t string, path []string, a reflect.Value) error {
 	nd.Filter = d.Filter
 	nd.customValueDiffers = d.customValueDiffers
 
-// 	if t != CREATE && t != DELETE {
-// 		return ErrInvalidChangeType
-// 	}
+	if t != CREATE && t != DELETE {
+		return ErrInvalidChangeType
+	}
 
 	if a.Kind() == reflect.Ptr {
 		a = reflect.Indirect(a)
